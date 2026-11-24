@@ -7,7 +7,7 @@ from flask import Flask, render_template, request, jsonify
 app = Flask(__name__)
 
 # Configure MySQL from environment variables
-#flask 
+#flask  code
 DB_CONFIG = {
     'host': os.environ.get('MYSQL_HOST', 'localhost'),
     'port': int(os.environ.get('MYSQL_PORT', '3306')),
