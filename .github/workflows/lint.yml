@@ -10,13 +10,14 @@ on:
 jobs:
   code-linting:
     runs-on: ubuntu-latest
+
     steps:
       # This step will automatically clone the code
-      - name: Checkout/Clone the code
+      - name: Check out the repository
         uses: actions/checkout@v7
-      # This step will install the linting tool
-      - name: Install linter
-        run: python3 -m pip install ruff      
-      # This step will run the linter
-      - name: Check the files for linting
-        run: ruff check .
+       # This step will install the linting tool 
+      - name: Install Ruff
+        run: python3 -m pip install ruff
+       # This step will run the linter
+      - name: Check Python lint and syntax
+        run: ruff check .        
